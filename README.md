@@ -9,8 +9,6 @@ This repository contains an implementation of autonomous agents in Python, desig
 - [Installation](#installation)
 - [Usage](#usage)
 - [Testing](#testing)
-- [Requirements](#requirements)
-- [Self-Assessment Questionnaire](#self-assessment-questionnaire)
 
 ## Overview
 
@@ -36,35 +34,40 @@ The project consists of two agents that communicate via message queues. The agen
 ## Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/yourusername/your-repo.git
    cd your-repo
    ```
 
 2. Set up a virtual environment:
+
    ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
    ```
 
 3. Install the required packages:
+
    ```bash
    pip install -r requirements.txt
    ```
 
 4. Create a `.env` file based on the `.env.example`:
+
    ```bash
    cp .env.example .env
    ```
+
    Then, open the `.env` file and fill in the values accordingly:
 
-    ```plaintext
-    ETH_NODE_URL=https://rpc.tenderly.co/YOUR_TENDERLY_PROJECT_URL   # Tenderly node URL
-    FROM_ADDRESS=0xYourFromAddressHere                               # Address initiating the transactions
-    SOURCE_ADDRESS=0xYourSourceAddressHere                           # Address holding token funds (e.g., USDC)
-    TOKEN_CONTRACT_ADDRESS=0xYourTokenContractAddressHere            # USDC or other ERC20 token contract address
-    PRIVATE_KEY=YourPrivateKeyHere                                   # Private key of FROM_ADDRESS (keep secure)
-    ```
+   ```plaintext
+   ETH_NODE_URL=https://rpc.tenderly.co/YOUR_TENDERLY_PROJECT_URL   # Tenderly node URL
+   FROM_ADDRESS=0xYourFromAddressHere                               # Address initiating the transactions
+   SOURCE_ADDRESS=0xYourSourceAddressHere                           # Address holding token funds (e.g., USDC)
+   TOKEN_CONTRACT_ADDRESS=0xYourTokenContractAddressHere            # USDC or other ERC20 token contract address
+   PRIVATE_KEY=YourPrivateKeyHere                                   # Private key of FROM_ADDRESS (keep secure)
+   ```
 
 5. Fill in the `.env` file with your Ethereum node URL, source address, and token contract address.
 
@@ -83,7 +86,6 @@ curl "https://virtual.mainnet.rpc.tenderly.co/1ddbd660-a5ba-4589-b77f-982707da73
 }'
 ```
 
-
 To run the agents, execute the following command:
 
 ```bash
@@ -101,4 +103,3 @@ python -m unittest test.py
 ```
 
 The tests will validate the functionality of the agents and their interactions.
-
