@@ -43,7 +43,7 @@ The project consists of two agents that communicate via message queues. The agen
 2. Set up a virtual environment:
 
    ```bash
-   python -m venv venv
+   python3 -m venv venv
    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
    ```
 
@@ -63,9 +63,9 @@ The project consists of two agents that communicate via message queues. The agen
 
    ```plaintext
    ETH_NODE_URL=https://rpc.tenderly.co/YOUR_TENDERLY_PROJECT_URL   # Tenderly node URL
-   FROM_ADDRESS=0xYourFromAddressHere                               # Address initiating the transactions
-   SOURCE_ADDRESS=0xYourSourceAddressHere                           # Address holding token funds (e.g., USDC)
-   TOKEN_CONTRACT_ADDRESS=0xYourTokenContractAddressHere            # USDC or other ERC20 token contract address
+   FROM_ADDRESS=0xYourFromAddress                               # Address initiating the transactions and  Address holding token funds (e.g., USDC)
+   TARGET_ADDRESS=0xYourTargetAddress                           # Address to send  funds
+   TOKEN_CONTRACT_ADDRESS=0xYourTokenContractAddress            # USDC or other ERC20 token contract address
    PRIVATE_KEY=YourPrivateKeyHere                                   # Private key of FROM_ADDRESS (keep secure)
    ```
 
